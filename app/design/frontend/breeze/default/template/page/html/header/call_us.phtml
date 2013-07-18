@@ -1,0 +1,15 @@
+<?php
+/**
+ * Benissimo Magento Theme
+ *
+ * @category    design
+ * @package     benissimo_default
+ * @copyright   Copyright (c) 2012 InfoStyle (http://infostyle.com.ua)
+ * @license     http://themeforest.net/licenses/regular_extended ThemeForest Regular & Extended License
+ */
+?>
+<?php if (($block_html = $this->getChildHtml('cms_header_call_us')) || ($phones = Mage::getStoreConfig('general/store_information/phone'))): ?>
+    <?php if ($block_html): echo $block_html; else: ?>
+        <?php echo $phones ?>
+    <?php endif ?>
+<?php endif ?>

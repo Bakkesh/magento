@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<!--
+ * @category    ItemBridge
+ * @package     ItemBridge_Theme
+ * @copyright   Copyright (c) 2012 InfoStyle (http://infostyle.com.ua)
+ * @license     http://themeforest.net/licenses/regular_extended ThemeForest Regular & Extended License
+-->
+<config>
+    <modules>
+        <ItemBridge_Theme>
+            <version>0.1</version>
+        </ItemBridge_Theme>
+    </modules>
+
+    <global>
+        <blocks>
+            <ibtheme>
+                <class>ItemBridge_Theme_Block</class>
+            </ibtheme>
+        </blocks>
+
+        <helpers>
+            <ibtheme>
+                <class>ItemBridge_Theme_Helper</class>
+            </ibtheme>
+        </helpers>
+    </global>
+
+    <default>
+        <ib_theme_design>
+            <general>
+                <page_bg>#ffffff</page_bg>
+
+                <input>#cccccc</input>
+                <input_focus>#59b7c2</input_focus>
+
+                <button>#59b7c2</button>
+                <button_hover>#2ab4c4</button_hover>
+                <button_active>#2baab9</button_active>
+
+                <text_color>#444444</text_color>
+                <link>#59b7c2</link>
+                <title>#444444</title>
+                <price>#2e8f9a</price>
+                <price_old>#777777</price_old>
+                <line>#e0e0e0</line>
+                <th_border>#a8dade</th_border>
+                <bottom_block>#f5f7f9</bottom_block>
+            </general>
+
+            <header>
+                <bg_top_1>#59b7c2</bg_top_1>
+                <bg_top_2>#7fcbce</bg_top_2>
+                <bg_top_3>#aadce0</bg_top_3>
+                <bg_top_4>#f5f7f9</bg_top_4>
+                <welcome_color>#777777</welcome_color>
+
+                <nav_private_hover>#59b7c2</nav_private_hover>
+
+                <language>#e6e9ed</language>
+                <language_hover>#d5e4f1</language_hover>
+                <language_active>#59b7c2</language_active>
+
+                <nav_primary>#f5f7f9</nav_primary>
+                <nav_primary_hover>#d5e4f1</nav_primary_hover>
+                <nav_primary_active>#78c4cd</nav_primary_active>
+                <nav_primary_drop>#ffffff</nav_primary_drop>
+                <nav_primary_drop_hover>#f5f7f9</nav_primary_drop_hover>
+            </header>
+
+            <slider>
+                <next_prev_bg>#ffffff</next_prev_bg>
+                <next_prev_hover_bg>#444444</next_prev_hover_bg>
+            </slider>
+
+            <product>
+                <product_hover>#59b7c2</product_hover>
+                <product_button_hover>#eff7ff</product_button_hover>
+                <product_button_cart>#f5f7f9</product_button_cart>
+                <tabs_border>#e0e0e0</tabs_border>
+                <tabs_bg>#f1f3f5</tabs_bg>
+                <tabs_hover_bg>#f7f7f7</tabs_hover_bg>
+                <tabs_active_bg>#ffffff</tabs_active_bg>
+            </product>
+
+            <footer>
+                <footer_bg>#f9fbfc</footer_bg>
+                <footer_links>#777777</footer_links>
+            </footer>
+
+        </ib_theme_design>
+    </default>
+
+    <adminhtml>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <ib_theme_design>
+                                            <title>ItemBridge Design</title>
+                                        </ib_theme_design>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+</config>

@@ -1,0 +1,339 @@
+<style type="text/css">
+
+/* General */
+input.input-text,
+input[type="email"],
+input[type="password"],
+input[type="text"],
+textarea,
+select,
+.selectBox{
+    border-color: <?php echo Mage::getStoreConfig('ib_theme_design/general/input') ?>;
+}
+input.input-text:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="text"]:focus,
+textarea:focus{
+    border-color: <?php echo Mage::getStoreConfig('ib_theme_design/general/input_focus') ?>;
+    box-shadow: 0px 0px 2px <?php echo Mage::getStoreConfig('ib_theme_design/general/input_focus') ?>;
+    -moz-box-shadow: 0px 0px 2px <?php echo Mage::getStoreConfig('ib_theme_design/general/input_focus') ?>;
+    -webkit-box-shadow: 0px 0px 2px <?php echo Mage::getStoreConfig('ib_theme_design/general/input_focus') ?>;
+}
+button,
+input[type="submit"]{
+    background-color: <?php echo Mage::getStoreConfig('ib_theme_design/general/button') ?>;
+}
+button:hover,
+input[type="submit"]:hover,
+#shopping-cart-table tfoot button:hover,
+.product-shop .ratings .rating-links a ~ a:hover,
+.product-shop .no-rating a:hover{
+    background-color: <?php echo Mage::getStoreConfig('ib_theme_design/general/button_hover') ?>;
+    box-shadow: 0px 0px 2px <?php echo Mage::getStoreConfig('ib_theme_design/general/button_hover') ?>;
+    -moz-box-shadow: 0px 0px 2px <?php echo Mage::getStoreConfig('ib_theme_design/general/button_hover') ?>;
+    -webkit-box-shadow: 0px 0px 2px <?php echo Mage::getStoreConfig('ib_theme_design/general/button_hover') ?>;
+}
+button:active,
+button:focus,
+input[type="submit"]:focus,
+input[type="submit"]:active{
+    background-color: <?php echo Mage::getStoreConfig('ib_theme_design/general/button_active') ?>;
+    box-shadow: 0px 0px 2px <?php echo Mage::getStoreConfig('ib_theme_design/general/button_active') ?>;
+    -moz-box-shadow: 0px 0px 2px <?php echo Mage::getStoreConfig('ib_theme_design/general/button_active') ?>;
+    -webkit-box-shadow: 0px 0px 2px <?php echo Mage::getStoreConfig('ib_theme_design/general/button_active') ?>;
+}
+body{
+    color: <?php echo Mage::getStoreConfig('ib_theme_design/general/text_color') ?>;
+}
+a {
+    color: <?php echo Mage::getStoreConfig('ib_theme_design/general/link') ?>;
+}
+h1, h2, h3, h4, h5, h6,
+.sidebar .block-title strong,
+.sidebar .block-content #narrow-by-list dt,
+.sidebar .block-content #narrow-by-list2 dt,
+#product_tabs_reviews_contents .comments .title{
+    color: <?php echo Mage::getStoreConfig('ib_theme_design/general/title') ?>;
+}
+.products-grid li.item .price-box,
+#crosssell-products-list li.item .price-box,
+.products-grid li.item .price-box .price,
+#crosssell-products-list li.item .price-box .price,
+.product-shop .availability-price .price-box .price,
+.product-shop .availability-price .price-box,
+.cart .col3-set .totals #shopping-cart-totals-table .price,
+.sidebar .column-products-block li .product-details .price-box,
+.sidebar .block-wishlist #wishlist-sidebar li .price-box,
+.sidebar .block-related li .product-details .price-box,
+#wishlist-table .price-box .price,
+#my-tags-table .price-box .price,
+.products-list li.item .cart .price-box,
+.products-list li.item .cart .price-box .price,
+.products-list li.item .cart .price-box .price-from:after,
+.product-options-bottom .price-box,
+.product-options-bottom .price-box .price,
+.cart .col3-set .totals #shopping-cart-totals-table .price,
+table#product_comparison .price,
+#checkout-step-shipping_method label .price,
+.checkout-multishipping-overview #checkout-review-submit big .price{
+    color: <?php echo Mage::getStoreConfig('ib_theme_design/general/price') ?>;
+}
+.products-grid li.item .price-box .old-price .price,
+#crosssell-products-list li.item .price-box .old-price .price,
+.product-shop .availability-price .price-box .old-price,
+.sidebar .column-products-block li .product-details .price-box .old-price,
+.sidebar .block-wishlist #wishlist-sidebar li .price-box .old-price,
+#wishlist-table .price-box .old-price .price,
+#my-tags-table .price-box .old-price .price,
+.products-list li.item .cart .price-box .old-price .price,
+table#product_comparison .price-box .old-price .price{
+    color: <?php echo Mage::getStoreConfig('ib_theme_design/general/price_old') ?>;
+}
+.messages,
+.alignleft,
+.alignright,
+.toolbar,
+.products-grid li.item,
+#crosssell-products-list li.item,
+.product-shop .product-img-box .product-image,
+.cart_cont #cart-sidebar .product-image,
+.products-list li.item,
+.sidebar .column-banners-block .banner,
+.account-login .registered-users .content,
+.customer-account-create #form-validate,
+.checkout-multishipping-register #form-validate,
+.product-shop .product-img-box .more-views li a{
+    border: 1px solid <?php echo Mage::getStoreConfig('ib_theme_design/general/line') ?>;
+}
+.products-grid li.item .price-box,
+#crosssell-products-list li.item .price-box,
+.products-grid li .actions li a,
+.toolbar .left-side a,
+.toolbar .left-side span,
+#crosssell-products-list li .product-details .add-to-links li a,
+.products-list li.item .product-image,
+.products-list li.item .entry-content,
+.products-list li.item .cart .add-to-links li+li,
+.pager .pages li.current,
+.pages li a{
+    border-right: 1px solid <?php echo Mage::getStoreConfig('ib_theme_design/general/line') ?>;
+}
+.limiter,
+blockquote,
+#product_tabs_reviews_contents .evaluation .evaluation-box+.evaluation-box{
+    border-left: 1px solid <?php echo Mage::getStoreConfig('ib_theme_design/general/line') ?>;
+}
+.img_description,
+table,
+#block_nav_primary,
+.f_navigation,
+.product-shop .availability-price,
+.product-shop .product-img-box .next_prev,
+.sidebar .actions,
+.sidebar .block-poll li+li,
+.sidebar .block-list li+li,
+.sidebar .column-products-block li+li,
+.comments li+li,
+.cart_cont #cart-sidebar li+li,
+.sidebar .block-reorder #cart-sidebar-reorder li+li,
+.pages,
+.sidebar .block-wishlist #wishlist-sidebar li+li,
+.sidebar .block-related li{
+    border-top: 1px solid <?php echo Mage::getStoreConfig('ib_theme_design/general/line') ?>;
+}
+.toolbar{
+    border-top: 0 none;
+}
+td,
+.product-view .product-collateral .box-collateral .c_header,
+.products-grid li.item .product-name,
+#crosssell-products-list li.item .product-name,
+.carousel .c_header,
+.f_navigation,
+.f_navigation h3,
+.sidebar .block-title,
+.sidebar .column-products-block h4,
+.product-shop .availability-price,
+.sidebar .block-content #narrow-by-list dt,
+.sidebar .block-content #narrow-by-list2 dt,
+.category-title h1,
+.product-name h1,
+.page-title h1,
+h1.post_title,
+#checkout-progress-state li,
+.pages,
+.product-shop .product-options,
+.sidebar #checkout-progress-wrapper dt,
+.product-view .product-shop + #product-options-wrapper{
+    border-bottom: 1px solid <?php echo Mage::getStoreConfig('ib_theme_design/general/line') ?>;
+}
+hr{
+    background-color: <?php echo Mage::getStoreConfig('ib_theme_design/general/line') ?>;
+}
+nav.private ul li:before{
+    color: <?php echo Mage::getStoreConfig('ib_theme_design/general/line') ?>;
+}
+@media only screen and (max-width: 410px) {
+    .category-products .products-list .item .cart{
+        border-top: 1px solid <?php echo Mage::getStoreConfig('ib_theme_design/general/line') ?>;
+    }
+}
+th{
+    border-bottom: 1px solid <?php echo Mage::getStoreConfig('ib_theme_design/general/th_border') ?>;
+}
+.bottom_block, 
+.cart .col3-set .col-1,
+.cart .col3-set .col-2,
+.cart .col3-set .col-3{
+    background-color: <?php echo Mage::getStoreConfig('ib_theme_design/general/bottom_block') ?>;
+}
+/* Header */
+body{
+    <?php
+    $bg_top_1 = Mage::getStoreConfig('ib_theme_design/header/bg_top_1');
+    $bg_top_2 = Mage::getStoreConfig('ib_theme_design/header/bg_top_2');
+    $bg_top_3 = Mage::getStoreConfig('ib_theme_design/header/bg_top_3');
+    $bg_top_4 = Mage::getStoreConfig('ib_theme_design/header/bg_top_4');
+    echo <<<BODY_BG
+    background: -moz-linear-gradient(top,  $bg_top_1 0%, $bg_top_1 6.666%, $bg_top_2 6.666%, $bg_top_2 13.333%, $bg_top_3 13.333%, $bg_top_3 20%, $bg_top_4 20%, $bg_top_4 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$bg_top_1), color-stop(6.666%,$bg_top_1), color-stop(6.666%,$bg_top_2), color-stop(13.333%,$bg_top_2), color-stop(13.333%,$bg_top_3), color-stop(20%,$bg_top_3), color-stop(20%,$bg_top_4), color-stop(100%,$bg_top_4));
+    background: -webkit-linear-gradient(top,  $bg_top_1 0%,$bg_top_1 6.666%,$bg_top_2 6.666%,$bg_top_2 13.333%,$bg_top_3 13.333%,$bg_top_3 20%,$bg_top_4 20%, $bg_top_4 100%);
+    background: -o-linear-gradient(top,  $bg_top_1 0%,$bg_top_1 6.666%,$bg_top_2 6.666%,$bg_top_2 13.333%,$bg_top_3 13.333%,$bg_top_3 20%,$bg_top_4 20%, $bg_top_4 100%);
+    background: -ms-linear-gradient(top,  $bg_top_1 0%,$bg_top_1 6.666%,$bg_top_2 6.666%,$bg_top_2 13.333%,$bg_top_3 13.333%,$bg_top_3 20%,$bg_top_4 20%, $bg_top_4 100%);
+    background: linear-gradient(to bottom,  $bg_top_1 0%,$bg_top_1 6.666%,$bg_top_2 6.666%,$bg_top_2 13.333%,$bg_top_3 13.333%,$bg_top_3 20%,$bg_top_4 20%, $bg_top_4 100%);
+BODY_BG;
+    ?>
+    background-repeat: repeat-x;
+    background-size: 100% 45px;
+    background-color: <?php echo Mage::getStoreConfig('ib_theme_design/header/page_bg') ?>;
+}
+
+.welcome{
+    color: <?php echo Mage::getStoreConfig('ib_theme_design/header/welcome_color') ?>;
+}
+.valuta ul li a,
+.lang ul li a{
+    background-color: <?php echo Mage::getStoreConfig('ib_theme_design/header/language') ?>;
+}
+.lang ul li a:hover,
+.valuta ul li a:hover{
+    background-color: <?php echo Mage::getStoreConfig('ib_theme_design/header/language_hover') ?>;
+}
+.valuta ul li.current a,
+.lang ul li.current a{
+    background-color: <?php echo Mage::getStoreConfig('ib_theme_design/header/language_active') ?>!important;
+}
+nav.private ul li a:hover,
+#cart_nav .cart_li:hover,
+#cart_nav li:hover .cart_li{
+    background-color: <?php echo Mage::getStoreConfig('ib_theme_design/header/nav_private_hover') ?>;
+}
+#block_nav_primary .grid_12{
+    background-color: <?php echo Mage::getStoreConfig('ib_theme_design/header/nav_primary') ?>;
+}
+@media only screen and (min-width: 1008px){
+    .primary ul li a{
+        background-color: <?php echo Mage::getStoreConfig('ib_theme_design/header/nav_primary') ?>;
+        border-color: <?php echo Mage::getStoreConfig('ib_theme_design/header/nav_primary') ?>;
+    }
+    .primary ul li a:hover,
+    .primary ul li:hover a,
+    .primary ul li a:active,
+    .primary ul li:active a{
+        background-color: <?php echo Mage::getStoreConfig('ib_theme_design/header/nav_primary_hover') ?>;
+        border-color: <?php echo Mage::getStoreConfig('ib_theme_design/header/nav_primary_hover') ?>;
+    }
+    .primary ul li.active a{
+        background-color: <?php echo Mage::getStoreConfig('ib_theme_design/header/nav_primary_active') ?>;
+        border-color: <?php echo Mage::getStoreConfig('ib_theme_design/header/nav_primary_active') ?>;
+    }
+    .primary ul ul.level0,
+    .primary ul ul.level0 li a{
+        background-color: <?php echo Mage::getStoreConfig('ib_theme_design/header/nav_primary_drop') ?>;
+    }
+    .primary ul ul.level0 li a:hover{
+        background-color: <?php echo Mage::getStoreConfig('ib_theme_design/header/nav_primary_drop_hover') ?>;
+    }
+}
+@media only screen and (max-width: 1007px){
+    .primary .nav-container{
+        background-color: <?php echo Mage::getStoreConfig('ib_theme_design/header/nav_primary') ?>;
+        border-color: <?php echo Mage::getStoreConfig('ib_theme_design/header/nav_primary') ?>;
+        box-shadow: 0px 0px 2px <?php echo Mage::getStoreConfig('ib_theme_design/header/nav_primary') ?>;
+        -moz-box-shadow: 0px 0px 2px <?php echo Mage::getStoreConfig('ib_theme_design/header/nav_primary') ?>;
+        -webkit-box-shadow: 0px 0px 2px <?php echo Mage::getStoreConfig('ib_theme_design/header/nav_primary') ?>;
+    }
+    .primary .nav-container ul li.parent a{
+        background-color: <?php echo Mage::getStoreConfig('ib_theme_design/header/nav_primary') ?>;
+        border-color: <?php echo Mage::getStoreConfig('ib_theme_design/header/nav_primary') ?>;
+    }
+    .primary .nav-container ul li.parent a:hover{
+        background-color: <?php echo Mage::getStoreConfig('ib_theme_design/header/nav_primary_hover') ?>;
+        border-color: <?php echo Mage::getStoreConfig('ib_theme_design/header/nav_primary_hover') ?>;
+    }
+    .primary .nav-container ul ul.level0,
+    .primary .nav-container ul ul.level0 li a{
+        background-color: <?php echo Mage::getStoreConfig('ib_theme_design/header/nav_primary_drop') ?>;
+    }
+    .primary .nav-container ul ul.level0 li a:hover{
+        background-color: <?php echo Mage::getStoreConfig('ib_theme_design/header/nav_primary_drop_hover') ?>;
+    }
+}
+/* Slider */
+.slidprev,
+.slidnext,
+.arows{
+    background-color: <?php echo Mage::getStoreConfig('ib_theme_design/slider/next_prev_bg') ?>;
+}
+.slidprev:hover,
+.slidnext:hover,
+a:hover.arows{
+    background-color: <?php echo Mage::getStoreConfig('ib_theme_design/slider/next_prev_hover_bg') ?>;
+}
+/* Product */
+.products-grid li.item:hover, #crosssell-products-list li.item:hover{
+    border: 1px solid <?php echo Mage::getStoreConfig('ib_theme_design/product/product_hover') ?>;
+    box-shadow: 0px 0px 4px <?php echo Mage::getStoreConfig('ib_theme_design/product/product_hover') ?>;
+    -moz-box-shadow: 0px 0px 4px <?php echo Mage::getStoreConfig('ib_theme_design/product/product_hover') ?>;
+    -webkit-box-shadow: 0px 0px 4px <?php echo Mage::getStoreConfig('ib_theme_design/product/product_hover') ?>;
+}
+.products-grid li .actions li a:hover{
+    background-color: <?php echo Mage::getStoreConfig('ib_theme_design/product/product_button_hover') ?>;
+}
+.products-grid li .actions li a.link-cart {
+    background-color: <?php echo Mage::getStoreConfig('ib_theme_design/product/product_button_cart') ?>;
+}
+.products-grid li .actions li a.link-cart:hover {
+    background-color: <?php echo Mage::getStoreConfig('ib_theme_design/product/product_button_hover') ?>;
+}
+.product-view .product-collateral .product-tabs .active a,
+.product-view .product-collateral .product-tabs .active a:hover,
+.product-view .product-collateral .product-tabs-content{
+    border-color: <?php echo Mage::getStoreConfig('ib_theme_design/product/tabs_border') ?>;
+}
+.product-view .product-collateral .product-tabs a{
+    background-color: <?php echo Mage::getStoreConfig('ib_theme_design/product/tabs_bg') ?>;
+    border-color: <?php echo Mage::getStoreConfig('ib_theme_design/product/tabs_bg') ?>;
+}
+.product-view .product-collateral .product-tabs a:hover{
+    background-color: <?php echo Mage::getStoreConfig('ib_theme_design/product/tabs_hover_bg') ?>;
+    border-color: <?php echo Mage::getStoreConfig('ib_theme_design/product/tabs_hover_bg') ?>;
+}
+.product-view .product-collateral .product-tabs .active a,
+.product-view .product-collateral .product-tabs .active a:hover{
+    background-color: <?php echo Mage::getStoreConfig('ib_theme_design/product/tabs_active_bg') ?>;
+    border-bottom: 1px solid <?php echo Mage::getStoreConfig('ib_theme_design/product/tabs_active_bg') ?>;
+}
+
+
+/* Footer */
+.f_info{
+    background-color: <?php echo Mage::getStoreConfig('ib_theme_design/footer/footer_bg') ?>;
+}
+.f_navigation ul a,
+.f_navigation ul a:hover{
+    color: <?php echo Mage::getStoreConfig('ib_theme_design/footer/footer_links') ?>;
+}
+
+</style>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config> 
+  <modules>
+ <modules>   
+        <Breeze_Catalog>
+			<version>0.0.1</version>
+		</Breeze_Catalog>
+ </modules>
+ </config>

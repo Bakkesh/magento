@@ -1,0 +1,397 @@
+<?xml version="1.0"?>
+<!--
+ * @category    ItemBridge
+ * @package     ItemBridge_Theme
+ * @copyright   Copyright (c) 2012 InfoStyle (http://infostyle.com.ua)
+ * @license     http://themeforest.net/licenses/regular_extended ThemeForest Regular & Extended License
+-->
+<config>
+    <tabs>
+        <itembridge translate="label" module="ibtheme">
+            <label>ItemBridge</label>
+            <sort_order>150</sort_order>
+        </itembridge>
+    </tabs>
+
+    <sections>
+        <ib_theme_design translate="label" module="ibtheme">
+            <label>Design</label>
+            <tab>itembridge</tab>
+            <sort_order>100</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <general translate="label">
+                    <label>General</label>
+                    <sort_order>100</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <expanded>1</expanded>
+                    <fields>
+                        <page_bg translate="label">
+                            <label>Page Color</label>
+                            <frontend_model>ibtheme/adminhtml_system_config_color</frontend_model>
+                            <sort_order>140</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </page_bg>
+                        <input translate="label">
+                            <label>Input Border Color</label>
+                            <frontend_model>ibtheme/adminhtml_system_config_color</frontend_model>
+                            <sort_order>100</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </input>
+                        <input_focus translate="label">
+                            <label>Focused Input Border Color</label>
+                            <frontend_model>ibtheme/adminhtml_system_config_color</frontend_model>
+                            <sort_order>110</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </input_focus>
+                        <button translate="label">
+                            <label>Button Color</label>
+                            <frontend_model>ibtheme/adminhtml_system_config_color</frontend_model>
+                            <sort_order>120</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </button>
+                        <button_hover translate="label">
+                            <label>Hovered Button Color</label>
+                            <frontend_model>ibtheme/adminhtml_system_config_color</frontend_model>
+                            <sort_order>130</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </button_hover>
+                        <button_active translate="label">
+                            <label>Pressed Button Color</label>
+                            <frontend_model>ibtheme/adminhtml_system_config_color</frontend_model>
+                            <sort_order>140</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </button_active>
+                        <text_color translate="label">
+                            <label>Text Color</label>
+                            <frontend_model>ibtheme/adminhtml_system_config_color</frontend_model>
+                            <sort_order>150</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </text_color>
+                        <link translate="label">
+                            <label>Link Color</label>
+                            <frontend_model>ibtheme/adminhtml_system_config_color</frontend_model>
+                            <sort_order>160</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </link>
+                        <title translate="label">
+                            <label>Title Color</label>
+                            <frontend_model>ibtheme/adminhtml_system_config_color</frontend_model>
+                            <sort_order>170</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </title>
+                        <price translate="label">
+                            <label>Price Color</label>
+                            <frontend_model>ibtheme/adminhtml_system_config_color</frontend_model>
+                            <sort_order>180</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </price>
+                        <price_old translate="label">
+                            <label>Old Price Color</label>
+                            <frontend_model>ibtheme/adminhtml_system_config_color</frontend_model>
+                            <sort_order>190</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </price_old>
+                        <line translate="label">
+                            <label>Line Color and Border Color</label>
+                            <frontend_model>ibtheme/adminhtml_system_config_color</frontend_model>
+                            <sort_order>200</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </line>
+                        <th_border translate="label">
+                            <label>Table Header Border Color</label>
+                            <frontend_model>ibtheme/adminhtml_system_config_color</frontend_model>
+                            <sort_order>210</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </th_border>
+                        <bottom_block translate="label">
+                            <label>Home Page » Bottom Block Color</label>
+                            <frontend_model>ibtheme/adminhtml_system_config_color</frontend_model>
+                            <sort_order>220</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </bottom_block>
+                    </fields>
+                </general>
+
+                <header translate="label">
+                    <label>Header</label>
+                    <sort_order>110</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <expanded>1</expanded>
+                    <fields>
+                        <bg_top_1 translate="label">
+                            <label>Header Ribbon Color 1</label>
+                            <frontend_model>ibtheme/adminhtml_system_config_color</frontend_model>
+                            <sort_order>100</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </bg_top_1>
+                        <bg_top_2 translate="label">
+                            <label>Header Ribbon Color 2</label>
+                            <frontend_model>ibtheme/adminhtml_system_config_color</frontend_model>
+                            <sort_order>110</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </bg_top_2>
+                        <bg_top_3 translate="label">
+                            <label>Header Ribbon Color 3</label>
+                            <frontend_model>ibtheme/adminhtml_system_config_color</frontend_model>
+                            <sort_order>120</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </bg_top_3>
+                        <bg_top_4 translate="label">
+                            <label>Header Color</label>
+                            <frontend_model>ibtheme/adminhtml_system_config_color</frontend_model>
+                            <sort_order>130</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </bg_top_4>
+                        <welcome_color translate="label">
+                            <label>Welcome Text Color</label>
+                            <frontend_model>ibtheme/adminhtml_system_config_color</frontend_model>
+                            <sort_order>150</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </welcome_color>
+                        <nav_private_hover translate="label">
+                            <label>Hovered Header Navigation Links Color</label>
+                            <frontend_model>ibtheme/adminhtml_system_config_color</frontend_model>
+                            <sort_order>160</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </nav_private_hover>
+
+                        <language translate="label">
+                            <label>Language Color</label>
+                            <frontend_model>ibtheme/adminhtml_system_config_color</frontend_model>
+                            <sort_order>170</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </language>
+                        <language_hover translate="label">
+                            <label>Hovered Language Color</label>
+                            <frontend_model>ibtheme/adminhtml_system_config_color</frontend_model>
+                            <sort_order>180</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </language_hover>
+                        <language_active translate="label">
+                            <label>Current Language Color</label>
+                            <frontend_model>ibtheme/adminhtml_system_config_color</frontend_model>
+                            <sort_order>190</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </language_active>
+
+                        <nav_primary translate="label">
+                            <label>Primary Navigation Menu » Color</label>
+                            <frontend_model>ibtheme/adminhtml_system_config_color</frontend_model>
+                            <sort_order>200</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </nav_primary>
+                        <nav_primary_hover translate="label">
+                            <label>Primary Navigation Menu » Hovered Item Color</label>
+                            <frontend_model>ibtheme/adminhtml_system_config_color</frontend_model>
+                            <sort_order>210</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </nav_primary_hover>
+                        <nav_primary_active translate="label">
+                            <label>Primary Navigation Menu » Current Item Color</label>
+                            <frontend_model>ibtheme/adminhtml_system_config_color</frontend_model>
+                            <sort_order>220</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </nav_primary_active>
+                        <nav_primary_drop translate="label">
+                            <label>Primary Navigation Menu » Sub-Menu Color</label>
+                            <frontend_model>ibtheme/adminhtml_system_config_color</frontend_model>
+                            <sort_order>230</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </nav_primary_drop>
+                        <nav_primary_drop_hover translate="label">
+                            <label>Primary Navigation Menu » Sub-Menu Hovered Item Color</label>
+                            <frontend_model>ibtheme/adminhtml_system_config_color</frontend_model>
+                            <sort_order>240</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </nav_primary_drop_hover>
+                    </fields>
+                </header>
+
+                <footer translate="label">
+                    <label>Footer</label>
+                    <sort_order>140</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <expanded>1</expanded>
+                    <fields>
+                        <footer_bg translate="label">
+                            <label>Footer Color</label>
+                            <frontend_model>ibtheme/adminhtml_system_config_color</frontend_model>
+                            <sort_order>100</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </footer_bg>
+                        <footer_links translate="label">
+                            <label>Footer Links Color</label>
+                            <frontend_model>ibtheme/adminhtml_system_config_color</frontend_model>
+                            <sort_order>110</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </footer_links>
+                    </fields>
+               </footer>
+
+                <slider translate="label">
+                    <label>Home Page Main Slider</label>
+                    <sort_order>120</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <expanded>1</expanded>
+                    <fields>
+                        <next_prev_bg translate="label">
+                            <label>Next / Previous Buttons Color</label>
+                            <frontend_model>ibtheme/adminhtml_system_config_color</frontend_model>
+                            <sort_order>100</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </next_prev_bg>
+                        <next_prev_hover_bg translate="label">
+                            <label>Hovered Next / Previous Buttons Color</label>
+                            <frontend_model>ibtheme/adminhtml_system_config_color</frontend_model>
+                            <sort_order>110</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </next_prev_hover_bg>
+                    </fields>
+                </slider>
+
+                <product translate="label">
+                    <label>Product</label>
+                    <sort_order>130</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <expanded>1</expanded>
+                    <fields>
+                        <product_hover translate="label">
+                            <label>Hovered Product Border Color</label>
+                            <frontend_model>ibtheme/adminhtml_system_config_color</frontend_model>
+                            <sort_order>100</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </product_hover>
+                        <product_button_hover translate="label">
+                            <label>Products Grid » Hovered Action Button Color</label>
+                            <frontend_model>ibtheme/adminhtml_system_config_color</frontend_model>
+                            <sort_order>110</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </product_button_hover>
+                        <product_button_cart translate="label">
+                            <label>Products Grid » Add to Cart Button Color</label>
+                            <frontend_model>ibtheme/adminhtml_system_config_color</frontend_model>
+                            <sort_order>120</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </product_button_cart>
+                        <tabs_border translate="label">
+                            <label>Tab Border Color</label>
+                            <frontend_model>ibtheme/adminhtml_system_config_color</frontend_model>
+                            <sort_order>130</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </tabs_border>
+                        <tabs_bg translate="label">
+                            <label>Tab Color</label>
+                            <frontend_model>ibtheme/adminhtml_system_config_color</frontend_model>
+                            <sort_order>140</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </tabs_bg>
+                        <tabs_hover_bg translate="label">
+                            <label>Hovered Tab Color</label>
+                            <frontend_model>ibtheme/adminhtml_system_config_color</frontend_model>
+                            <sort_order>150</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </tabs_hover_bg>
+                        <tabs_active_bg translate="label">
+                            <label>Current Tab Color</label>
+                            <frontend_model>ibtheme/adminhtml_system_config_color</frontend_model>
+                            <sort_order>160</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </tabs_active_bg>
+                    </fields>
+                </product>
+
+            </groups>
+        </ib_theme_design>
+    </sections>
+</config>

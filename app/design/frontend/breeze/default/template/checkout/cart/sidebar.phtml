@@ -1,0 +1,49 @@
+<?php
+/**
+ * Benissimo Magento Theme
+ *
+ * @category    design
+ * @package     benissimo_default
+ * @copyright   Copyright (c) 2012 InfoStyle (http://infostyle.com.ua)
+ * @license     http://themeforest.net/licenses/regular_extended ThemeForest Regular & Extended License
+ */
+
+/**
+ * Shoping cart sidebar
+ *
+ * @see Mage_Checkout_Block_Cart_Sidebar
+ */
+?>
+<?php if ($this->getIsNeedToDisplaySideBar()):?>
+    <?php $_cartQty = $this->getSummaryCount() ?>
+        <a href ="/checkout/cart/" class="cart_li">
+            <?php echo $this->__('Cart') ?>
+            <?php if ( ! $this->canApplyMsrp()): ?>
+                <?php echo Mage::helper('checkout')->formatPrice($this->getSubtotal()) ?>
+            <?php endif; ?>         
+        </a>
+
+        <div class="cart_cont">
+            <?php $_items = $this->getRecentItems() ?>
+            <?php if(count($_items)): ?>
+                <p>Recently added item(s)</p>
+                <ul id="cart-sidebar" class="mini-products-list">
+                    <?php foreach($_items as $_item): ?>
+                    <?php echo $this->getItemHtml($_item) ?>
+                    <?php endforeach; ?>
+                </ul>
+                <script type="text/javascript">decorateList('cart-sidebar', 'none-recursive')</script>
+            <?php else: ?>
+                <p><?php echo $this->__('You have no items in your shopping cart.') ?></p>
+            <?php endif ?>
+            <?php if ($_cartQty): ?>
+                <div class="actions">
+                    <button type="button" title="<?php echo $this->__('View contents of your shopping cart') ?>" class="button button-shopping-cart" onclick="setLocation('<?php echo $this->getUrl('checkout/cart') ?>')"><span><span><?php echo $this->__('View shopping cart') ?></span></span></button>
+                        <?php if ($this->isPossibleOnepageCheckout()): ?>
+                    <button type="button" title="<?php echo $this->__('Checkout') ?>" class="button button-checkout" onclick="setLocation('<?php echo $this->getCheckoutUrl() ?>')"><span><span><?php echo $this->__('Checkout') ?></span></span></button>
+                    <?php endif ?>
+                    <?php echo $this->getChildHtml('extra_actions') ?>
+                </div>
+            <?php endif ?>
+        </div><!-- .cart_cont -->
+<?php endif;?>

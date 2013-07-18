@@ -1,0 +1,26 @@
+<?php
+/**
+ * Benissimo Magento Theme
+ *
+ * @category    design
+ * @package     benissimo_default
+ * @copyright   Copyright (c) 2012 InfoStyle (http://infostyle.com.ua)
+ * @license     http://themeforest.net/licenses/regular_extended ThemeForest Regular & Extended License
+ */
+?>
+<?php
+/**
+ * Currency switcher
+ *
+ * @see Mage_Directory_Block_Currency
+ */
+?>
+<?php if($this->getCurrencyCount()>1): ?>
+<ul>
+    <?php foreach ($this->getCurrencies() as $_code => $_name): ?>
+    <li<?php if($_code == $this->getCurrentCurrencyCode()): ?> class="current"<?php endif ?>>
+        <a href="<?php echo $this->getSwitchCurrencyUrl($_code) ?>" title="<?php echo $this->htmlEscape($_name) ?>"><?php echo Mage::app()->getLocale()->currency($_code)->getSymbol() ?></a>
+    </li>
+    <?php endforeach; ?>
+</ul>
+<?php endif; ?>

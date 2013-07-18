@@ -1,0 +1,81 @@
+<?php
+/**
+ * Benissimo Magento Theme
+ *
+ * @category    design
+ * @package     benissimo_default
+ * @copyright   Copyright (c) 2012 InfoStyle (http://infostyle.com.ua)
+ * @license     http://themeforest.net/licenses/regular_extended ThemeForest Regular & Extended License
+ */
+/**
+ * @var Mage_Page_Block_Html_Header $this
+ */
+?>
+<div class="container_12">
+    <div id="top">
+        <div class="grid_3">
+            <div class="phone_top">
+                <span><?php echo $this->getChildHtml('header_call_us') ?></span>
+            </div><!-- .phone_top -->
+        </div><!-- .grid_3 -->
+        
+        <div class="grid_6">
+            <div class="welcome">
+                <?php echo $this->getWelcome() ?> <?php echo $this->getAdditionalHtml() ?>
+            </div><!-- .welcome -->
+        </div><!-- .grid_6 -->
+        
+        <div class="grid_3">
+            <div class="valuta">
+                <?php echo $this->getChildHtml('header_currency') ?>
+            </div><!-- .valuta -->
+            
+            <div class="lang">
+                <?php echo $this->getChildHtml('store_language') ?>
+            </div><!-- .lang -->
+        </div><!-- .grid_3 -->
+    </div><!-- #top -->
+    
+    <header id="branding">
+        <div class="grid_3">
+            <?php if ($this->getIsHomePage()): ?>
+                <h1 class="logo" title="<?php echo $this->getLogoAlt() ?>"><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></h1>
+                    <?php else: ?>
+                <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a>
+            <?php endif ?>
+        </div><!-- .grid_3 -->
+        
+        <div class="grid_3">
+            <?php echo $this->getChildHtml('topSearch') ?>
+        </div><!-- .grid_3 -->
+        
+        <div class="grid_6">
+            <ul id="cart_nav">
+                <li>
+                    <?php echo $this->getChildHtml('cart_sidebar') ?>
+                </li>
+            </ul><!-- #cart_nav -->
+            
+            <nav class="private">
+                <?php if ($block_html = $this->getChildHtml('topLinks')): ?>
+                    <?php echo $block_html ?>
+                <?php endif ?>
+            </nav><!-- .private -->
+        </div><!-- .grid_6 -->
+  </header><!-- #branding -->
+</div><!-- .container_12 -->
+
+<?/*php echo $this->getChildHtml('topContainer') */?>
+
+<div class="clear"></div>
+
+<div id="block_nav_primary">
+    <div class="container_12">
+        <div class="grid_12">
+            <nav class="primary">
+                <a class="menu-select" href="#">Catalog</a>
+                <?php echo $this->getChildHtml('topMenu') ?>
+            </nav><!-- .primary -->
+        </div><!-- .grid_12 -->
+    </div><!-- .container_12 -->
+</div><!-- .block_nav_primary -->

@@ -1,0 +1,70 @@
+<?php
+/**
+ * Benissimo Magento Theme
+ *
+ * @category    design
+ * @package     benissimo_default
+ * @copyright   Copyright (c) 2012 InfoStyle (http://infostyle.com.ua)
+ * @license     http://themeforest.net/licenses/regular_extended ThemeForest Regular & Extended License
+ */
+
+/**
+ * Product media data template
+ *
+ * @see Mage_Catalog_Block_Product_View_Media
+ */
+?>
+<?php
+    $_product = $this->getProduct();
+    $_helper = $this->helper('catalog/output');
+?>
+<?php if ($_product->getImage() != 'no_selection' && $_product->getImage()): ?>
+<div class="product-image product-image-zoom">
+    <?php
+        $main_image_url = $this->helper('catalog/image')->init($_product, 'image');
+        $_img = '<img src="'.$main_image_url.'" alt="'.$this->htmlEscape($this->getImageLabel()).'" title="'.$this->htmlEscape($this->getImageLabel()).'" />';
+        $_helper->productAttribute($_product, $_img, 'image');
+    ?>
+    <a href="<?php echo $main_image_url ?>" class="jqzoom" rel='gal1' title="">
+        <img src=" <?php echo $main_image_url->resize(294) ?>" alt="<?php echo $this->htmlEscape($this->getImageLabel()) ?>" title="<?php echo $this->htmlEscape($this->getImageLabel()) ?>" />
+    </a>
+</div>
+<?/*<p class="zoom-notice" id="track_hint"><?php echo $this->__('Double click on above image to view full picture') ?></p>*/?>
+<?/*<div class="zoom">
+    <img id="zoom_out" src="<?php echo $this->getSkinUrl('images/slider_btn_zoom_out.gif') ?>" alt="<?php echo $this->__('Zoom Out') ?>" title="<?php echo $this->__('Zoom Out') ?>" class="btn-zoom-out" />
+    <div id="track">
+        <div id="handle"></div>
+    </div>
+    <img id="zoom_in" src="<?php echo $this->getSkinUrl('images/slider_btn_zoom_in.gif') ?>" alt="<?php echo $this->__('Zoom In') ?>" title="<?php echo $this->__('Zoom In') ?>" class="btn-zoom-in" />
+</div>*/?>
+<script type="text/javascript">
+//<![CDATA[
+    Event.observe(window, 'load', function() {
+        product_zoom = new Product.Zoom('image', 'track', 'handle', 'zoom_in', 'zoom_out', 'track_hint');
+    });
+//]]>
+</script>
+<?php else: ?>
+<div class="product-image">
+    <?php
+        $_img = '<img src="'.$this->helper('catalog/image')->init($_product, 'image')->resize(294).'" alt="'.$this->htmlEscape($this->getImageLabel()).'" title="'.$this->htmlEscape($this->getImageLabel()).'" />';
+        echo $_helper->productAttribute($_product, $_img, 'image');
+    ?>
+</div>
+<?php endif; ?>
+<?php if (count($this->getGalleryImages()) > 0): ?>
+<div class="more-views">
+    <ul id="thumblist">
+    <?php foreach ($this->getGalleryImages() as $_image): ?>
+        <li>
+            <a href='javascript:void(0);' rel="{gallery: 'gal1', smallimage: '<?php echo $_image->url ?>',largeimage: '<?php echo $_image->url ?>'}"><img src="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->resize(64); ?>" alt="<?php echo $this->htmlEscape($_image->getLabel()) ?>" ></a>
+        </li>
+    <?php endforeach; ?>				
+    </ul><!-- #thumblist -->
+</div>
+<?php endif; ?>
+
+<div class="next_prev">
+    <a id="img_prev" class="arows" href="#"><span>Prev</span></a>
+    <a id="img_next" class="arows" href="#"><span>Next</span></a>
+</div><!-- . -->

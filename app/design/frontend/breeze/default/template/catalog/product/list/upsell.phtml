@@ -1,0 +1,68 @@
+<?php
+/**
+ * Benissimo Magento Theme
+ *
+ * @category    design
+ * @package     benissimo_default
+ * @copyright   Copyright (c) 2012 InfoStyle (http://infostyle.com.ua)
+ * @license     http://themeforest.net/licenses/regular_extended ThemeForest Regular & Extended License
+ */
+?>
+
+<?php
+    $ibtheme = $this->helper('ibtheme');
+    $_productCollection = $this->getItemCollection()->getItems();
+    $_collectionSize = count($_productCollection);
+    $_columnCount = $this->getColumnCount();
+?>
+
+
+<?php if ($_collectionSize > 0): ?>
+<div class="box-collateral box-up-sell">
+    <div class="c_header">
+	<div class="grid_7">
+		<h2><?php echo $this->__('Related Products') ?></h2>
+	</div><!-- .grid_7 -->
+
+	<div class="grid_2">
+		<a id="next_related" class="next arows" href="#"><span>Next</span></a>
+		<a id="prev_related" class="prev arows" href="#"><span>Prev</span></a>
+	</div><!-- .grid_2 -->
+    </div><!-- .c_header -->
+
+    <?php $i=0; foreach ($_productCollection as $_product): ?>
+        <?php if ($i++ % $_columnCount == 0): ?>
+    <div class="related_list">
+        <ul class="products-grid" id="product-upsell">
+        <?php endif ?>
+            <li class="item<?php if(($i-1)%$_columnCount==0): ?> first<?php elseif($i%$_columnCount==0): ?> last<?php endif; ?> <?php echo $ibtheme->getProductClasses($_product) ?>">
+                <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" class="product-image"><img src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(210); ?>" alt="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" /></a>
+                <h2 class="product-name"><a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($_product->getName(), null, true) ?>"><?php echo $this->htmlEscape($_product->getName()) ?></a></h2>
+                <?php if ($_product->getRatingSummary()): ?>
+                    <?php echo $this->getReviewsSummaryHtml($_product, 'short') ?>
+                <?php endif ?>
+                <div class="actions">
+                    <ul class="add-to-links">
+                        <?php if($_product->isSaleable()): ?>
+                            <li><a href="<?php echo $this->getAddToCartUrl($_product) ?>" class="link-cart"><?php echo $this->__('Add to Cart') ?></a></li>
+                        <?php else: ?>
+                            <li><span class="link-cart availability out-of-stock" title="<?php echo $this->__('Out of stock') ?>"><?php echo $this->__('Add to Cart') ?></span></li>
+                        <?php endif ?>
+                        <?php if ($this->helper('wishlist')->isAllow()): ?>
+                            <li><a href="<?php echo $this->helper('wishlist')->getAddUrl($_product) ?>" class="link-wishlist"><?php echo $this->__('Add to Wishlist') ?></a></li>
+                        <?php endif ?>
+                        <?php if($_compareUrl=$this->getAddToCompareUrl($_product)): ?>
+                            <li><a href="<?php echo $_compareUrl ?>" class="link-compare"><?php echo $this->__('Add to Compare') ?></a></li>
+                        <?php endif ?>
+                    </ul>
+                </div>
+                <?php echo $this->getPriceHtml($_product, true, '-upsell') ?>
+            </li>
+        <?php if ($i % $_columnCount == 0 || $i == $_collectionSize): ?>
+        </ul>
+    </div><!-- #related_list -->
+        <?php endif ?>
+    <?php endforeach ?>
+    <script type="text/javascript">decorateGeneric($$('ul.products-grid'), ['odd','even','first','last'])</script>
+</div>
+<?php endif ?>

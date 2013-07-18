@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+            <Breeze_Catalog>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Breeze_Catalog>
+    </modules>
+</config>

@@ -1,0 +1,31 @@
+<?php
+/**
+ * Benissimo Magento Theme
+ *
+ * @category    design
+ * @package     benissimo_default
+ * @copyright   Copyright (c) 2012 InfoStyle (http://infostyle.com.ua)
+ * @license     http://themeforest.net/licenses/regular_extended ThemeForest Regular & Extended License
+ */
+?>
+<div class="block footer-contacts-block">
+    <h3>Contact Us</h3>
+    <ul class="f_contact">
+    <?php if ($block_html = $this->getChildHtml('cms_footer_contacts')): echo $block_html; else: ?>
+
+        <?php if ($phones = Mage::getStoreConfig('general/store_information/phone')): ?>
+
+        <?php if ($address = Mage::getStoreConfig('general/store_information/address')): ?>
+        <li><?php echo $address ?></li>
+    
+        <?php endif ?>
+    
+        <li><?php echo $phones ?></li>
+    
+        <?php endif ?>
+
+        <li><a href="mailto:<?php echo Mage::getStoreConfig('trans_email/ident_sales/email') ?>"><?php echo Mage::getStoreConfig('trans_email/ident_sales/email') ?></a></li>
+
+    <?php endif ?>
+    </ul>
+</div>

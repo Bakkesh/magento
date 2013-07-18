@@ -1,0 +1,53 @@
+<?php
+/**
+ * Benissimo Magento Theme
+ *
+ * @category    design
+ * @package     benissimo_default
+ * @copyright   Copyright (c) 2012 InfoStyle (http://infostyle.com.ua)
+ * @license     http://themeforest.net/licenses/regular_extended ThemeForest Regular & Extended License
+ */
+?>
+<?php
+/**
+ * Cart cross sell items template
+ *
+ * @see Mage_Checkout_Block_Cart_Crosssell
+ */
+?>
+<?php if($this->getItemCount()): ?>
+<?php $ibtheme = $this->helper('ibtheme') ?>
+<div class="carousel">
+    <div class="c_header">
+          <div class="grid_10">
+            <h5><?php echo $this->__('Based on your selection, you may be interested in the following items:') ?></h5>
+          </div><!-- .grid_10 -->
+
+          <div class="grid_2">
+            <a id="crosssell-next" class="next arows" href="#" style="display: block;"><span>Next</span></a>
+            <a id="crosssell-prev" class="prev arows" href="#" style="display: block;"><span>Prev</span></a>
+           </div><!-- .grid_2 -->
+    </div>
+    <ul id="crosssell-products-list">
+    <?php foreach ($this->getItems() as $_item): ?>
+        <li class="item <?php echo $ibtheme->getProductClasses($_item) ?>">
+            <a class="product-image" href="<?php echo $_item->getProductUrl() ?>" title="<?php echo $this->htmlEscape($_item->getName()) ?>"><img src="<?php echo $this->helper('catalog/image')->init($_item, 'thumbnail')->resize(210); ?>" alt="<?php echo $this->htmlEscape($_item->getName()) ?>" /></a>
+            <div class="product-details">
+                <h3 class="product-name"><a href="<?php echo $_item->getProductUrl() ?>"><?php echo $this->htmlEscape($_item->getName()) ?></a></h3>
+                <?php echo $this->getPriceHtml($_item, true) ?>
+                <button type="button" title="<?php echo $this->__('Add to Cart') ?>" class="button btn-cart" onclick="setLocation('<?php echo $this->getAddToCartUrl($_item) ?>')"><span><span><?php echo $this->__('Add to Cart') ?></span></span></button>
+                <ul class="add-to-links">
+                    <?php if ($this->helper('wishlist')->isAllow()) : ?>
+                        <li><a href="<?php echo $this->getAddToWishlistUrl($_item) ?>" class="link-wishlist"><?php echo $this->__('Add to Wishlist') ?></a></li>
+                    <?php endif; ?>
+                    <?php if($_compareUrl=$this->getAddToCompareUrl($_item)): ?>
+                        <li><span class="separator">|</span> <a href="<?php echo $_compareUrl ?>" class="link-compare"><?php echo $this->__('Add to Compare') ?></a></li>
+                    <?php endif; ?>
+                </ul>
+            </div>
+        </li>
+    <?php endforeach; ?>
+    </ul>
+    <script type="text/javascript">decorateList('crosssell-products-list', 'none-recursive')</script>
+</div>
+<?php endif; ?>

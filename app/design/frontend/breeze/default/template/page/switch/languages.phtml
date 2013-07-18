@@ -1,0 +1,19 @@
+<?php
+/**
+ * Benissimo Magento Theme
+ *
+ * @category    design
+ * @package     benissimo_default
+ * @copyright   Copyright (c) 2012 InfoStyle (http://infostyle.com.ua)
+ * @license     http://themeforest.net/licenses/regular_extended ThemeForest Regular & Extended License
+ */
+?>
+<?php if (count($this->getStores()) > 1): ?>
+<ul>
+    <?php foreach ($this->getStores() as $_lang): ?>
+    <li<?php if($_lang->getCode() == Mage::app()->getStore()->getCode()): ?> class="current"<?php endif ?>>
+        <a href="<?php echo $_lang->getCurrentUrl() ?>" title="<?php echo $this->htmlEscape($_lang->getName()) ?>"><?php echo $this->htmlEscape($_lang->getCode()) ?></a>
+    </li>
+    <?php endforeach; ?>
+</ul>
+<?php endif; ?>
